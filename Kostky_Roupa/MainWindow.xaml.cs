@@ -26,7 +26,6 @@ namespace Kostky_Roupa
         public MainWindow()
         {
             InitializeComponent();
-            
             for (int i = 0; i < kostka.Length; i++)
             {
                 kostka[i] = new kostky();
@@ -43,10 +42,11 @@ namespace Kostky_Roupa
                 Width = vzdalenost,
                 Height = vzdalenost,
                 Fill = Brushes.White,
+                Stroke = Brushes.Black,
                 StrokeThickness = 2
             };
-            Canvas.SetTop(obryskostky, y);
             Canvas.SetLeft(obryskostky, x);
+            Canvas.SetTop(obryskostky, y);
             platno.Children.Add(obryskostky);
 
             cisla(x, y, hodnota, vzdalenost);
@@ -61,12 +61,13 @@ namespace Kostky_Roupa
             {
                 new Point(vycentrovano, vycentrovano),
                 new Point(vycentrovano - odsazeni, vycentrovano - odsazeni),
-                new Point(vycentrovano + odsazeni, vycentrovano + vycentrovano),
+                new Point(vycentrovano + odsazeni, vycentrovano + odsazeni),
                 new Point(vycentrovano - odsazeni, vycentrovano + odsazeni),
-                new Point(vycentrovano + odsazeni, vycentrovano - vycentrovano),
+                new Point(vycentrovano + odsazeni, vycentrovano - odsazeni),
                 new Point(vycentrovano - odsazeni, vycentrovano),
                 new Point(vycentrovano + odsazeni, vycentrovano)
             };
+
             Ellipse[] cisla = new Ellipse[hodnota];
             for (int i = 0; i < hodnota; i++)
             {
