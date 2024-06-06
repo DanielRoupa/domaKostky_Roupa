@@ -26,7 +26,8 @@ namespace Kostky_Roupa
         public MainWindow()
         {
             InitializeComponent();
-            for(int i = 0; i < kostka.Length; i++)
+            
+            for (int i = 0; i < kostka.Length; i++)
             {
                 kostka[i] = new kostky();
             }
@@ -47,8 +48,9 @@ namespace Kostky_Roupa
             Canvas.SetTop(obryskostky, y);
             Canvas.SetLeft(obryskostky, x);
             platno.Children.Add(obryskostky);
-            
-            
+
+            cisla(x, y, hodnota, vzdalenost);
+
         }
         private void cisla(int x, int y, int hodnota, int vzdalenost)
         {
