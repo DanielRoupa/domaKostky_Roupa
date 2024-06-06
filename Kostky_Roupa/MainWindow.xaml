@@ -8,8 +8,9 @@
         Title="MainWindow" Height="600" Width="800" MinHeight="600px" MinWidth="800px">
     <Grid>
         <Canvas Name="platno" Background="DeepSkyBlue">
-            <Button Content="Hodit" Name="btnhodit" Width="150px" Height="50px" VerticalAlignment="Bottom" HorizontalAlignment="Center" Canvas.Left="400" Canvas.Top="400" Click="btnhod_Click"/>
+            
         </Canvas>
+        <Button Content="Hodit" Name="btnhodit" Width="150px" Height="50px" VerticalAlignment="Bottom" HorizontalAlignment="Center" Canvas.Left="400" Canvas.Top="400" Click="btnhod_Click"/>
 
     </Grid>
 </Window>
