@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
-namespace Kostky_Roupa
-{
-    
+
+
 
     public class kostky
     {
@@ -26,4 +25,4 @@ namespace Kostky_Roupa
             hodnota = random.Next(1, 7);
         }
     }
-}
+

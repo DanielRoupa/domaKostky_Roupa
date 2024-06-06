@@ -22,10 +22,13 @@ namespace Kostky_Roupa
     public partial class MainWindow : Window
     {
         private kostky[] kostka = new kostky[6];
+        
 
         public MainWindow()
         {
+            platno = new Canvas();
             InitializeComponent();
+
             for (int i = 0; i < kostka.Length; i++)
             {
                 kostka[i] = new kostky();
@@ -110,6 +113,21 @@ namespace Kostky_Roupa
         {
             await animacehodu();
             vykreslitkostky();
+        }
+    }
+    public class kostky
+    {
+        private static Random random = new Random();
+        public int hodnota { get; private set; }
+
+        public kostky()
+        {
+            Hod();
+        }
+
+        public void Hod()
+        {
+            hodnota = random.Next(1, 7);
         }
     }
 }
